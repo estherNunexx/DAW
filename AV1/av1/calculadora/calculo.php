@@ -1,10 +1,13 @@
 <?php
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
 
     $a = $_POST["a"];
     $b = $_POST["b"];
     $operacao = $_POST["operacao"];
+
 
     if ($operacao == "soma") {
         $resultado = $a + $b;
@@ -20,8 +23,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
+
     echo "<h1>Resultado: $resultado</h1>";
     echo "<br><a href='index.php'>Voltar</a>";
 }
+
 
 ?>
