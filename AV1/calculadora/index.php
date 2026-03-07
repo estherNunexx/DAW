@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Minha Calculadora</title>
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="CSS/estilo.css">
 </head>
 <body>
 
@@ -11,7 +11,7 @@
 <h1>Minha Calculadora</h1>
 
 
-<form method="POST" action="calculo.php">
+<form action="calculo.php" method="POST">
 
 
 1º Número: <input type="number" name="a" required><br><br>
@@ -23,6 +23,8 @@
         <option value="subtracao">Subtração</option>
         <option value="multiplicacao">Multiplicação</option>
         <option value="divisao">Divisão</option>
+        <option value="potencia">Potência</option>
+        <option value="raiz">Raiz Quadrada</option>
     </select>
 
 
