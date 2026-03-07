@@ -20,13 +20,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $resultado = $a / $b;
         } else {
             $resultado = "Erro: divisão por zero!";
-        }
-    }
+         }
+
+} elseif ($operacao == "potencia") {
+    $resultado = pow($a, $b);
 
 
     echo "<h1>Resultado: $resultado</h1>";
     echo "<br><a href='index.php'>Voltar</a>";
 }
-
+}
 
 ?>
