@@ -9,10 +9,10 @@
 
 <h1>Minha Calculadora</h1>
 
-<form action="calculo.php" method="POST">
+<form action="operacao.php" method="POST">
 
 1º Número: <input type="number" name="a" required><br><br>
-2º Número: <input type="number" name="b"><br><br>
+2º Número: <input type="number" name="b" required><br><br>
 
 <select name="operacao">
     <option value="soma">Soma</option>
@@ -20,7 +20,7 @@
     <option value="multiplicacao">Multiplicação</option>
     <option value="divisao">Divisão</option>
     <option value="potencia">Potência</option>
-    <option value="raiz">Raiz Quadrada</option>
+    <option value="raiz">Raiz</option>
 </select>
 
 <br><br>
