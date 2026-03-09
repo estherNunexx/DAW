@@ -3,11 +3,9 @@ body {
     background-color: #f2f2f2;
 }
 
-
 h1 {
     text-align: center;
 }
-
 
 form {
     background-color: white;
@@ -17,12 +15,10 @@ form {
     border: 1px solid #ccc;
 }
 
-
 input, select {
     width: 100%;
     margin-bottom: 10px;
 }
-
 
 input[type="submit"] {
     background-color: #4CAF50;
@@ -30,4 +26,3 @@ input[type="submit"] {
     border: none;
     padding: 5px;
 }
-
