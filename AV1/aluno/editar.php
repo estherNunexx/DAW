@@ -1,14 +1,14 @@
 <?php
 
 $matricula = $_GET["matricula"];
+$arquivo = __DIR__ . "/alunos.txt";
 
-$arquivo = file("alunos.txt");
+$linhas = file($arquivo);
 
 $nome = "";
 $email = "";
 
-foreach($arquivo as $linha){
-
+foreach($linhas as $linha){
     $dados = explode(";", trim($linha));
 
     if($dados[0] == $matricula){

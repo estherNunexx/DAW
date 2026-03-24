@@ -1,8 +1,9 @@
 <?php
 
-$matricula = $_GET["matricula"];
+$matricula = trim($_GET["matricula"]);
+$arquivo = __DIR__ . "/alunos.txt";
 
-$linhas = file("alunos.txt");
+$linhas = file($arquivo);
 
 $novoArquivo = "";
 
@@ -15,7 +16,7 @@ foreach($linhas as $linha){
     }
 }
 
-file_put_contents("alunos.txt", $novoArquivo);
+file_put_contents($arquivo, $novoArquivo);
 
 header("Location: index.php?msg=excluido");
 

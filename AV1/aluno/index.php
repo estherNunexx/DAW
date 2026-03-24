@@ -1,6 +1,6 @@
 <?php
 
-$arquivo = "alunos.txt";
+$arquivo = __DIR__ . "/alunos.txt";
 $alunos = [];
 
 if(file_exists($arquivo)){
@@ -36,17 +36,19 @@ if(isset($_GET["matricula"])){
 <br><br>
 
 <form method="GET">
-
 Filtrar por Matrícula:
 <input type="text" name="matricula">
-
 <button type="submit">Filtrar</button>
-
 <a href="index.php">Limpar Filtro</a>
-
 </form>
 
 <br>
+
+<?php
+if(isset($_GET["msg"]) && $_GET["msg"] == "excluido"){
+    echo "<p style='color:green;'>Aluno excluído com sucesso!</p>";
+}
+?>
 
 <table border="1" cellpadding="8">
 
@@ -69,7 +71,10 @@ foreach($alunos as $aluno){
     echo "<td>".$aluno[0]."</td>";
     echo "<td>".$aluno[1]."</td>";
     echo "<td>".$aluno[2]."</td>";
-    echo "<td><a href='editar.php?matricula=".$aluno[0]."'>Editar</a></td>";
+    echo "<td>
+    <a href='editar.php?matricula=".$aluno[0]."'>Editar</a> |
+    <a href='excluir.php?matricula=".$aluno[0]."' onclick='return confirm(\"Tem certeza?\")'>Excluir</a>
+    </td>";
     echo "</tr>";
 }
 

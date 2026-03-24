@@ -1,12 +1,14 @@
 <?php
 
-$matricula = $_POST["matricula"];
-$nome = $_POST["nome"];
-$email = $_POST["email"];
+$matricula = trim($_POST["matricula"]);
+$nome = trim($_POST["nome"]);
+$email = trim($_POST["email"]);
 
-$linha = $matricula.";".$nome.";".$email."\n";
+$arquivo = __DIR__ . "/alunos.txt";
 
-file_put_contents("alunos.txt", $linha, FILE_APPEND);
+$linha = $matricula . ";" . $nome . ";" . $email . "\n";
+
+file_put_contents($arquivo, $linha, FILE_APPEND);
 
 header("Location: sucesso.php");
 
