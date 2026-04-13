@@ -2,12 +2,12 @@
 <html>
 <body>
 
-<h2>Criar Pergunta Discursiva</h2>
+<h2>Criar Pergunta - Discursiva</h2>
 
 <form action="salvar_discursiva.php" method="POST">
 
 Pergunta:<br>
-<input type="text" name="pergunta"><br><br>
+<input type="text" name="pergunta" required><br><br>
 
 Resposta:<br>
 <input type="text" name="resposta"><br><br>
@@ -15,6 +15,8 @@ Resposta:<br>
 <input type="submit" value="Salvar">
 
 </form>
+
+<br><a href="index.php">Voltar</a>
 
 </body>
 </html>
