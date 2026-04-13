@@ -9,6 +9,7 @@
 <h2>Menu</h2>
 
 <a href="criar_multipla.php">Criar Pergunta-Multipla Escolha</a><br>
+<a href="criar_discursiva.php">Criar Pergunta-Discursiva</a><br>
 <a href="listar.php">Listar Perguntas</a><br>
 
 </body>
