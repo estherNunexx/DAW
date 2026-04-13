@@ -1,1 +1,32 @@
+<?php
 
+$arquivo = fopen("dados.txt", "r");
+
+echo "<h2>Lista de Perguntas</h2>";
+
+while(!feof($arquivo)) {
+$linha = fgets($arquivo);
+
+f($linha != "") {
+$dados = explode(";", $linha);
+
+if(count($dados) >= 3) {
+
+    echo "<b>Pergunta:</b> " . $dados[2] . "<br>";
+if($dados[1] == "M") {
+   echo "A) " . $dados[3] . "<br>";
+  echo "B) " . $dados[4] . "<br>";
+  echo "C) " . $dados[5] . "<br>";
+  echo "D) " . $dados[6] . "<br>";
+  echo "<b>Correta:</b> " . $dados[7] . "<br>";
+
+    echo "<hr>";
+        }
+    }
+}
+
+fclose($arquivo);
+
+echo "<a href='index.php'>Voltar</a>";
+
+?>
