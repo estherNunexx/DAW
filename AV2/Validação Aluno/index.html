@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Incluir Aluno</title>
+</head>
+<body>
 
+    <h1>Incluir Aluno</h1>
+
+    Nome:<br>
+    <input type="text" id="nome"><br><br>
+
+    Matricula (apenas numeros):<br>
+    <input type="text" id="matricula"><br><br>
+
+    E-mail (minusculas, @ e .com):<br>
+    <input type="text" id="email"><br><br>
+
+    <button onclick="enviar()">Confirmar</button>
+
+    <p id="resposta"></p>
+
+    <script>
+        function enviar() {
+        
+            const dados = {
+                nome: document.getElementById('nome').value,
+                matricula: document.getElementById('matricula').value,
+                email: document.getElementById('email').value
+            };
+
+            // Envia para o servidor Node
+            fetch('http://localhost:3000/validar', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(dados)
+            })
+            .then(res => res.json())
+            .then(resultado => {
+            
+                document.getElementById('resposta').innerText = resultado.texto;
+            });
+        }
+    </script>
+
+</body>
+</html>
