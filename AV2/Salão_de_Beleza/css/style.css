@@ -1,0 +1,43 @@
+body{
+
+    font-family: Arial;
+
+    background:#f4f4f4;
+
+    margin:40px;
+
+}
+
+h1{
+
+    color:#236b5d;
+
+}
+
+button{
+
+    padding:10px;
+
+    width:220px;
+
+    background:#9dd7c2;
+
+    border:none;
+
+    cursor:pointer;
+
+    margin-top:8px;
+
+}
+
+button:hover{
+
+    background:#79c2a6;
+
+}
+
+img{
+
+    border-radius:10px;
+
+}
