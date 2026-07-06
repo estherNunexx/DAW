@@ -1,104 +1,112 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="pt-br">
 
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Agendamento</title>
 
 <link rel="stylesheet" href="css/style.css">
 
+<script src="js/script.js"></script>
+
 </head>
 
 <body>
 
+<header>
+
+<div class="logo">
+
+<img src="img/logo.png">
+
+</div>
+
+<nav>
+
+<a href="home.html">Início</a>
+<a href="servicos.html">Serviços</a>
+<a href="agendamento.html">Agendamento</a>
+<a href="meus_agendamentos.html">Meus Agendamentos</a>
+
+</nav>
+
+</header>
+
+<section class="pagina">
+
 <h1>Agendamento</h1>
 
-<label>Serviço</label>
+<p>Preencha os dados abaixo.</p>
 
-<br>
+<div class="formulario">
 
-<select>
+<label>Serviço</label><br>
 
-<option>Corte</option>
+<select id="servico">
 
-<option>Escova</option>
-
-<option>Progressiva</option>
-
-<option>Barba</option>
-
-<option>Manicure</option>
-
-<option>Sobrancelha</option>
+<option value="1">Progressiva</option>
+<option value="2">Corte Feminino</option>
+<option value="3">Barba Simples</option>
+<option value="4">Unha em Gel</option>
+<option value="5">Design de Sobrancelha</option>
 
 </select>
 
 <br><br>
 
-<label>Profissional</label>
+<label>Profissional</label><br>
 
-<br>
+<select id="profissional">
 
-<select>
-
-<option>Ana</option>
-
-<option>Carlos</option>
-
-<option>Julia</option>
+<option value="1">Maria</option>
+<option value="2">João</option>
+<option value="3">Ana</option>
+<option value="4">Paula</option>
 
 </select>
 
 <br><br>
 
-<label>Data</label>
+<label>Data</label><br>
 
-<br>
-
-<input type="date">
+<input type="date" id="data">
 
 <br><br>
 
-<label>Horário</label>
+<label>Horário</label><br>
 
-<br>
-
-<input type="time">
+<input type="time" id="hora">
 
 <br><br>
 
-<label>Forma de Pagamento</label>
+<label>Forma de Pagamento</label><br>
 
-<br>
-
-<select>
+<select id="pagamento">
 
 <option>Pix</option>
-
 <option>Cartão</option>
-
 <option>Dinheiro</option>
 
 </select>
 
 <br><br>
 
-<button>
-
+<button onclick="agendar()">
 Confirmar Agendamento
-
 </button>
 
 <br><br>
 
 <button onclick="location.href='servicos.html'">
-
 Voltar
-
 </button>
+
+</div>
+
+</section>
 
 </body>
 
