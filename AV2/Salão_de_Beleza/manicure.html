@@ -1,45 +1,77 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="pt-br">
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Manicure</title>
+    <title>Manicure</title>
 
-<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
-<h1>Manicure</h1>
+<header>
 
-<ul>
+    <div class="logo">
+        <img src="img/logo.png" alt="Logo">
+    </div>
 
-<li>Unha em Gel</li>
+    <nav>
+        <a href="home.html">Início</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="agendamento.html">Agendamento</a>
+        <a href="meus_agendamentos.html">Meus Agendamentos</a>
+    </nav>
 
-<li>Banho de Fibra</li>
+</header>
 
-<li>Esmaltação</li>
+<section class="pagina">
 
-</ul>
+    <h1>Manicure</h1>
 
-<button onclick="location.href='agendamento.html'">
+    <p>Escolha um dos nossos serviços.</p>
 
-Agendar Serviço
+    <div class="cards">
 
-</button>
+        <div class="card">
 
-<br><br>
+            <img src="img/gel.jpg" alt="Unha em Gel">
 
-<button onclick="location.href='servicos.html'">
+            <h3>Unha em Gel</h3>
 
-Voltar
+            <p>Aplicação completa</p>
 
-</button>
+            <p>R$ 80,00</p>
+
+            <button onclick="location.href='agendamento.html'">
+                Agendar
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <img src="img/esmalte.jpg" alt="Esmaltação">
+
+            <h3>Esmaltação</h3>
+
+            <p>Cuticulagem + esmaltação</p>
+
+            <p>R$ 40,00</p>
+
+            <button onclick="location.href='agendamento.html'">
+                Agendar
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
 
 </body>
-
 </html>
