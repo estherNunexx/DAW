@@ -1,47 +1,95 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="pt-br">
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Cabeleireiro</title>
+    <title>Cabeleireiro</title>
 
-<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
-<h1>Cabeleireiro</h1>
+<header>
 
-<ul>
+    <div class="logo">
+        <img src="img/logo.png">
+    </div>
 
-<li>Corte Feminino</li>
+    <nav>
+        <a href="home.html">Início</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="agendamento.html">Agendamento</a>
+        <a href="meus_agendamentos.html">Meus Agendamentos</a>
+    </nav>
 
-<li>Escova</li>
+</header>
 
-<li>Progressiva</li>
+<section class="pagina">
 
-<li>Pintura</li>
+    <h1>Cabeleireiro</h1>
 
-</ul>
+    <p>
+        Escolha um dos nossos serviços.
+    </p>
 
-<button onclick="location.href='agendamento.html'">
+    <div class="cards">
 
-Agendar Serviço
+        <div class="card">
 
-</button>
+            <img src="img/progressiva.jpg">
 
-<br><br>
+            <h3>Progressiva</h3>
 
-<button onclick="location.href='servicos.html'">
+            <p>Progressiva sem formol</p>
 
-Voltar
+            <p>R$150,00</p>
 
-</button>
+            <button onclick="location.href='agendamento.html'">
+                Agendar
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <img src="img/corte.jpg">
+
+            <h3>Corte Feminino</h3>
+
+            <p>Corte moderno</p>
+
+            <p>R$60,00</p>
+
+            <button onclick="location.href='agendamento.html'">
+                Agendar
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <img src="img/escova.jpg">
+
+            <h3>Escova</h3>
+
+            <p>Escova completa</p>
+
+            <p>R$50,00</p>
+
+            <button onclick="location.href='agendamento.html'">
+                Agendar
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
 
 </body>
-
 </html>
