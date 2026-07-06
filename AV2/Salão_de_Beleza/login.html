@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <img src="img/logo.png" alt="Logo">
+    </div>
+
+    <nav>
+        <a href="home.html">Início</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="cadastro.html">Cadastro</a>
+    </nav>
+
+</header>
+
+<section class="login">
+
+    <div class="login-box">
+
+        <h1>Bem-vindo!</h1>
+
+        <p>Entre na sua conta para agendar seu horário.</p>
+
+        <form action="login.php" method="post">
+
+            <label>E-mail</label>
+            <input type="email" name="email" placeholder="Digite seu e-mail" required>
+
+            <label>Senha</label>
+            <input type="password" name="senha" placeholder="Digite sua senha" required>
+
+            <button type="submit">Entrar</button>
+
+        </form>
+
+        <div class="cadastro-link">
+            Ainda não possui conta?
+            <a href="cadastro.html">Cadastre-se</a>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
