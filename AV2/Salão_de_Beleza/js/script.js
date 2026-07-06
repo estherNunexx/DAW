@@ -69,41 +69,104 @@ xhr.send(
 
 }
 
-
 function entrar(){
 
-let email = document.getElementById("emailLogin").value;
-let senha = document.getElementById("senhaLogin").value;
+    let email = document.getElementById("emailLogin").value;
+    let senha = document.getElementById("senhaLogin").value;
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.open("POST","php/login.php",true);
+
+    xhr.setRequestHeader(
+        "Content-Type",
+        "application/x-www-form-urlencoded"
+    );
+
+    xhr.onreadystatechange = function(){
+
+        if(xhr.readyState == 4 && xhr.status == 200){
+
+            let resposta = JSON.parse(xhr.responseText);
+
+            if(resposta.status == "ok"){
+
+                alert("Login realizado com sucesso!");
+
+                window.location.href = "home.html";
+
+            }else{
+
+                alert("Email ou senha inválidos!");
+
+            }
+
+        }
+
+    };
+
+    xhr.send(
+        "email=" + encodeURIComponent(email) +
+        "&senha=" + encodeURIComponent(senha)
+    );
+}
+
+    function agendar(){
+
+let cliente = 1;
+
+let servico = document.getElementById("servico").value;
+let profissional = document.getElementById("profissional").value;
+let data = document.getElementById("data").value;
+let hora = document.getElementById("hora").value;
+
+if(data == ""){
+    alert("Escolha uma data.");
+    return;
+}
+
+if(hora == ""){
+    alert("Escolha um horário.");
+    return;
+}
 
 let xhr = new XMLHttpRequest();
 
-xhr.open("POST","php/login.php",true);
+xhr.open("POST","php/agendar.php",true);
 
 xhr.setRequestHeader(
-"Content-Type",
-"application/x-www-form-urlencoded"
+    "Content-Type",
+    "application/x-www-form-urlencoded"
 );
 
 xhr.onreadystatechange = function(){
 
-if(xhr.readyState == 4 && xhr.status == 200){
-let resposta = JSON.parse(xhr.responseText);
+    if(xhr.readyState == 4 && xhr.status == 200){
 
-if(resposta.status == "ok"){
+        let resposta = JSON.parse(xhr.responseText);
 
-    alert("Login realizado com sucesso!");
+        if(resposta.status == "ok"){
 
-}else{
+            alert("Agendamento realizado com sucesso!");
 
-alert("Email ou senha inválidos!");
+            window.location.href = "home.html";
+
+        }else{
+
+            alert("Erro ao realizar agendamento.");
 
         }
+
     }
-}
+
+};
 
 xhr.send(
-"email="+email+
-"&senha="+senha
+    "cliente=" + cliente +
+    "&servico=" + servico +
+    "&profissional=" + profissional +
+    "&data=" + data +
+    "&hora=" + hora
 );
 
 }
