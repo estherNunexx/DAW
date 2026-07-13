@@ -147,9 +147,7 @@ xhr.onreadystatechange = function(){
 
         if(resposta.status == "ok"){
 
-            alert("Agendamento realizado com sucesso!");
-
-            window.location.href = "home.html";
+            window.location.href = "pagamento.html";
 
         }else{
 
